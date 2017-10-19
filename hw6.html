@@ -14,7 +14,7 @@
                 "Carsa",
                 48.467522,
                 -123.311098
-            ]
+            ],
             [
                 "Student Union Building",
                 48.464944,
@@ -40,8 +40,8 @@
 
       google.maps.event.addListener(marker, 'click', (function(marker, i) {
         return function() {
-          infowindow.setContent(locations[i][0] + " " + locations [i][1]
-          + " " + locations [i][2] + " " + cur);
+          infowindow.setContent(locations[i][0] + "  " + locations[i][1]
+          + "  " + locations[i][2] + "  " + cur);
           cur++;
           infowindow.open(map, marker);
         }
