@@ -1,7 +1,7 @@
 <html>
     <head>
         <div id="map" style="width: 500px; height: 400px;"></div>
- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCc6XD9aKGYFXlGhCXefviLFwhfuLpgNnE&callback=initMap">
+ <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCc6XD9aKGYFXlGhCXefviLFwhfuLpgNnE">
  </script>
     <script>
             var cur = 0;
@@ -41,7 +41,7 @@
 
       google.maps.event.addListener(marker, 'click', (function(marker, i) {
         return function() {
-            
+
           infowindow.setContent(locations[i][0] + " " + locations[i][1]
           + " " + locations[i][2] + " " + cur);
           cur++;
