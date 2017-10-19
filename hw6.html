@@ -4,6 +4,7 @@
  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCc6XD9aKGYFXlGhCXefviLFwhfuLpgNnE&callback=initMap">
  </script>
     <script>
+            var cur = 0;
             var locations = [
         [
                 "David Strong Building",
@@ -40,8 +41,9 @@
 
       google.maps.event.addListener(marker, 'click', (function(marker, i) {
         return function() {
-          infowindow.setContent(locations[i][0] + "  " + locations[i][1]
-          + "  " + locations[i][2] + "  " + cur);
+            
+          infowindow.setContent(locations[i][0] + " " + locations[i][1]
+          + " " + locations[i][2] + " " + cur);
           cur++;
           infowindow.open(map, marker);
         }
