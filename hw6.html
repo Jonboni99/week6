@@ -1,6 +1,9 @@
 <html>
     <head>
-        <script>
+        <div id="map" style="width: 500px; height: 400px;"></div>
+ <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCc6XD9aKGYFXlGhCXefviLFwhfuLpgNnE&callback=initMap">
+ </script>
+    <script>
             var locations = [
         [
                 "David Strong Building",
@@ -18,10 +21,10 @@
                 -123.308125
             ]
         ]
-
-        var map = new google.maps.Map(document.getElementById('map'), {
+        
+    var map = new google.maps.Map(document.getElementById('map'), {
       zoom: 15,
-      center: new google.maps.LatLng(48.463649,  -123.311951),
+      center: new google.maps.LatLng(48.463649, -123.311951),
       mapTypeId: google.maps.MapTypeId.ROADMAP
     });
 
@@ -37,11 +40,12 @@
 
       google.maps.event.addListener(marker, 'click', (function(marker, i) {
         return function() {
-          infowindow.setContent(locations[i][0]);
+          infowindow.setContent(locations[i][0] + " " + locations [i][1]
+          + " " + locations [i][2] + " " + cur);
+          cur++;
           infowindow.open(map, marker);
         }
       })(marker, i));
     }
-        </script>
-    </head>
-</html>
+    </script>
+</head>
